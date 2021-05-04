@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ionic App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
+  </head>
+  <body>
+    <ion-app>
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-buttons slot="end">
+            <ion-button>
+              <ion-icon name="disc-outline"></ion-icon> Hiruzen
+            </ion-button>
+          </ion-buttons>
+          <ion-title><ion-icon name="happy"></ion-icon> App </ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col size-md="4" offset-md="4">
+              <ion-card>
+                <ion-card-header color="primary">
+                  <ion-card-subtitle><strong>Add</strong></ion-card-subtitle>
+                </ion-card-header>
+                <ion-card-content>
+                  <ion-item>
+                    <ion-label position="floating"> 📋 Name </ion-label>
+                    <ion-input type="text" id="name"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label position="floating"> 💰 Price </ion-label>
+                    <ion-input type="number" id="price"></ion-input>
+                  </ion-item>
+                  <ion-row class="ion-justify-content-end">
+                    <ion-button
+                      color="primary"
+                      class="justify content center"
+                      id="btnSave"
+                    >
+                      <ion-icon name="save-outline"></ion-icon>
+                    </ion-button>
+                  </ion-row>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+            <ion-col size-md="4" offset-md="4">
+              <!-- List of products-->
+              <ion-card>
+                <ion-list>
+                  <ion-list-header color="primary">
+                    <ion-label>List of Products</ion-label>
+                  </ion-list-header>
+
+                  <div id="list"></div>
+                </ion-list>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-content>
+    </ion-app>
+
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
